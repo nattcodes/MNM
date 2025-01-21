@@ -41,25 +41,81 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// const images = [
-//     'https://img.freepik.com/free-photo/funny-dark-skinned-female-feels-great-dances-rhythm-shakes-raised-hands-sings-along-with-music-wears-headphones_273609-25469.jpg?t=st=1735580999~exp=1735584599~hmac=69b0a68fc23d6cc3749f494a500843970af5f2b2cffac769f56211be35d94120&w=1480',
-//     'https://images.pexels.com/photos/794064/pexels-photo-794064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-//     'https://images.pexels.com/photos/794062/pexels-photo-794062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-//     'https://img.freepik.com/free-photo/happy-cheerful-woman-enjoying-beach-sunset_53876-146825.jpg'
-// ];
+let missionChange = document.querySelector('.feature-card.dark');
 
-// let currentIndex = 0;
+const images = [
+    'https://img.freepik.com/free-photo/people-identifical-clothes-african-couple-autumn-city-people-sitting-uses-phone_1157-42584.jpg?t=st=1736533683~exp=1736537283~hmac=c7ff39b8f3befa0b3d5ebdc0e7017e42ef3e3ac3c71f165696972054ac7dd682&w=1380',
+    'https://img.freepik.com/free-photo/medium-shot-plus-sized-woman-influencer_23-2151414149.jpg?t=st=1736533725~exp=1736537325~hmac=72c525cba85c6fd1a40b5e06d3ca415d083b5501d5575bcc37f7bfeb317c1837&w=1380',
+    'https://img.freepik.com/free-photo/african-american-woman-taking-selfie-with-her-smartphone_23-2149093245.jpg?t=st=1736533764~exp=1736537364~hmac=c08dfaf88191e47ef3d0494b541cce4d100513b7da63610994d0abd12a033253&w=1380',
+    'https://img.freepik.com/free-photo/front-view-smiley-friends-taking-selfie_23-2149452666.jpg?t=st=1736533827~exp=1736537427~hmac=48213c13c501fac426ba0e129dee98bbd037fea1c0e5a7284bebec592735466c&w=1380',
+    'https://img.freepik.com/free-photo/group-friends-posing-outside-clothing-store-city_23-2149295740.jpg?t=st=1736533910~exp=1736537510~hmac=e90ada0e70b8963c1713dc77b65841cdff2f3ee26a19034ae6a934f70fb4d624&w=1380'
 
-// function changeBackground() {
-//     document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
-//     currentIndex = (currentIndex + 1) % images.length;
-// }
+]
 
-// // Change background every 5 seconds
-// setInterval(changeBackground, 5000);
+let currentIndex = 0;
 
-// // Set the initial background image
-// changeBackground();
+function changeBackground() {
+    missionChange.style.backgroundImage = `url('${images[currentIndex]}')`;
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+// Change background every 5 seconds
+setInterval(changeBackground, 5000);
+
+// Set the initial background image
+changeBackground();
+
+
+const testimonials = [
+    {
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aperiam, accusantium impedit ratione iure alias aliquid nam odit natus commodi?",
+        img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800",
+        name: "Felix Morgan",
+    },
+    {
+        text: "This service is outstanding! Highly recommended for everyone.",
+        img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800",
+        name: "John Doe",
+    },
+    {
+        text: "Amazing experience! I’m extremely satisfied with the quality.",
+        img: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=800",
+        name: "Jane Smith",
+    },
+];
+
+let currentIndexTes = 0;
+window.addEventListener("DOMContentLoaded", () => {
+    const testimonialContainer = document.getElementById("testimonial");
+    testimonialContainer.classList.add("fade-in");
+});
+
+function updateTestimonial() {
+    const testimonialContainer = document.getElementById("testimonial");
+    currentIndex = (currentIndex + 1) % testimonials.length; // Move to the next testimonial
+    const currentTestimonial = testimonials[currentIndexTes];
+
+    // Fade-out animation
+    testimonialContainer.classList.add("fade-out");
+
+    setTimeout(() => {
+        // Update content
+        testimonialContainer.querySelector("h1").textContent = currentTestimonial.text;
+        testimonialContainer.querySelector("img").src = currentTestimonial.img;
+        testimonialContainer.querySelector("h2").textContent = currentTestimonial.name;
+
+        // Fade-in animation
+        testimonialContainer.classList.remove("fade-out");
+        testimonialContainer.classList.add("fade-in");
+
+        // Prepare for the next testimonial
+        currentIndexTes = (currentIndexTes + 1) % testimonials.length;
+    }, 1000); // Match with the fade-out duration
+}
+
+// Start the rotation after the initial display
+setInterval(updateTestimonial, 10000); // Change testimonials every 5 seconds // Change testimonials every 5 seconds
+
 
 
 // const imageUrls = [
