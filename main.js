@@ -117,6 +117,103 @@ function updateTestimonial() {
 setInterval(updateTestimonial, 10000); // Change testimonials every 5 seconds // Change testimonials every 5 seconds
 
 
+const imageContainer = document.querySelectorAll('.image-container');
+const circle = document.querySelectorAll('.circle');
+
+imageContainer.forEach(imageContainerItem => {
+    imageContainerItem.addEventListener('mousemove', (e) => {
+        const rect = imageContainerItem.getBoundingClientRect();
+        const x = e.clientX - rect.left; // X-coordinate relative to the container
+        const y = e.clientY - rect.top;  // Y-coordinate relative to the container
+
+        // Move the circle to follow the mouse
+        circle.forEach(circleItem => {
+            circleItem.style.left = `${x}px`;
+            circleItem.style.top = `${y}px`;
+        })
+
+    });
+
+})
+
+
+
+imageContainer.forEach(imageContainerItem => {
+    imageContainerItem.addEventListener('mouseleave', (e) => {
+        const rect = imageContainerItem.getBoundingClientRect();
+        const x = e.clientX - rect.left; // X-coordinate relative to the container
+        const y = e.clientY - rect.top;  // Y-coordinate relative to the container
+
+        // Move the circle to follow the mouse
+        circle.forEach(circleItem => {
+            circleItem.style.left = `50%`;
+            circleItem.style.top = `50%`;
+        })
+
+    });
+
+})
+
+// ====================
+
+const cards = document.querySelectorAll('.news1207-card');
+const animationDelay = 3500; // 0.3s delay between cards
+
+function resetCards() {
+    cards.forEach(card => {
+        card.classList.remove('news1207-active');
+    });
+}
+
+function animateCards() {
+    resetCards();
+
+    // Show all cards initially
+    cards.forEach(card => {
+        card.classList.add('news1207-active');
+    });
+
+    // After 5 seconds, start removing cards from back to front
+    setTimeout(() => {
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.remove('news1207-active');
+            }, (cards.length - 1 - index) * animationDelay); // Reverse order
+        });
+
+        // Reset and start over after all cards are hidden
+        setTimeout(() => {
+            animateCards();
+        }, cards.length * animationDelay - 2500); // Add 1s extra delay before restarting
+    }, 5000);
+}
+
+// Start the animation
+animateCards();
+
+// Form validation
+// const emailInput = document.getElementById('email');
+// const submitButton = document.getElementById('news1207-submit');
+
+// submitButton.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const email = emailInput.value;
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+//     if (!email) {
+//         alert('Please enter your email address');
+//         return;
+//     }
+
+//     if (!emailRegex.test(email)) {
+//         alert('Please enter a valid email address');
+//         return;
+//     }
+
+//     alert('Thank you for subscribing!');
+//     emailInput.value = '';
+// });
+
 
 // const imageUrls = [
 //     './Assests/WhatsApp Image 2024-12-30 at 19.04.53_2e457fb9.jpg',
