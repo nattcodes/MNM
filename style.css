@@ -2714,6 +2714,18 @@ footer .mnm-footer-content {
 
 }
 
+@media (max-width: 380px) {
+
+
+    .hero-heading {
+        font-size: 1.7rem;
+
+    }
+
+
+
+}
+
 /* @media (max-width: 1024px) {
     .mnm-footer-content {
         grid-template-columns: repeat(2, 1fr);
