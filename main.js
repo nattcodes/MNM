@@ -191,6 +191,29 @@ function animateCards() {
 // Start the animation
 animateCards();
 
+
+
+// =============================MENU BAR==============
+
+
+const menuBtn = document.querySelector(".btn");
+const menu = document.querySelector(".nav-links");
+
+menuBtn.addEventListener('click', () => {
+
+    menuBtn.classList.toggle("active");
+    menu.classList.toggle("active");
+
+
+})
+
+// ===============X==============MENU BAR==========X====
+
+
+
+
+
+
 // Form validation
 // const emailInput = document.getElementById('email');
 // const submitButton = document.getElementById('news1207-submit');
