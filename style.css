@@ -1239,35 +1239,38 @@ footer .mnm-footer-content {
         position: fixed;
         top: 0;
         left: -100%;
-        /* Start completely off the left edge */
-        width: 100%;
+        width: 80%;
+        max-width: 300px;
         height: 100vh;
-        padding-top: 2rem;
-        text-align: center;
-        background: #000000;
-        transition: all 0.6s ease-in-out;
+        background: linear-gradient(135deg, #141E30, #243B55);
+        padding-top: 4rem;
+        text-align: left;
+        transition: all 0.5s ease;
         z-index: 5;
         display: grid;
-        gap: 0rem;
-        margin: 0;
+        gap: 1rem;
         align-items: center;
     }
 
     .nav-links.active {
-        left: 0%;
-        /* Slide in from the left */
+        left: 0;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
     }
 
     .nav-links a {
         color: rgb(234, 234, 234);
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-family: Poppins;
-        margin: 0;
-        padding: 0;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
     }
 
-
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
 
 
 
@@ -2077,7 +2080,7 @@ footer .mnm-footer-content {
 
 
 
-    .hamburger-lines .hero {
+    .hero {
         background-image: url('https://img.freepik.com/free-photo/funny-dark-skinned-female-feels-great-dances-rhythm-shakes-raised-hands-sings-along-with-music-wears-headphones_273609-25469.jpg?t=st=1735580999~exp=1735584599~hmac=69b0a68fc23d6cc3749f494a500843970af5f2b2cffac769f56211be35d94120&w=1480');
         background-position: center;
         background-size: cover;
@@ -2099,7 +2102,7 @@ footer .mnm-footer-content {
 
     .hero-content {
 
-        padding: 5rem 3rem 2rem;
+        padding: 5rem 1.5rem 2rem;
 
     }
 
@@ -2132,7 +2135,7 @@ footer .mnm-footer-content {
     .about-section {
         gap: 1rem;
 
-        padding: 2rem 2.5rem;
+        padding: 2rem 1.5rem;
 
     }
 
@@ -2273,7 +2276,7 @@ footer .mnm-footer-content {
     }
 
     .horizontal-section {
-        padding: 2rem 2.6rem;
+        padding: 2rem 1.7rem;
 
     }
 
@@ -2396,7 +2399,7 @@ footer .mnm-footer-content {
     }
 
     .why_choose_us {
-        padding: 1rem 2.5rem;
+        padding: 1rem 1.7rem;
     }
 
 
@@ -2476,7 +2479,7 @@ footer .mnm-footer-content {
     }
 
     .testimonials-section {
-        padding: 1rem 2.5rem;
+        padding: 1rem 1.7rem;
     }
 
     .testimonials-section .tes-sec-container {
@@ -2511,7 +2514,7 @@ footer .mnm-footer-content {
     }
 
     .blog {
-        padding: 2rem 2.5rem;
+        padding: 2rem 1.7rem;
         background-color: white;
         color: black;
     }
@@ -2554,7 +2557,7 @@ footer .mnm-footer-content {
 
     .news1207 {
         background-color: white;
-        padding: 2rem 2.5rem;
+        padding: 2rem 1.7rem;
     }
 
     .news1207-container {
@@ -2640,7 +2643,7 @@ footer .mnm-footer-content {
     }
 
     footer .mnm-footer-content {
-        padding: 2rem 2.5rem;
+        padding: 2rem 1.7rem;
         backdrop-filter: blur(10px);
         background-color: #00000087;
         display: flex;
