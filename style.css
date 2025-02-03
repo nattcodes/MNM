@@ -123,11 +123,12 @@ body {
 
     }
 
-    50% {
+    40% {
         background-image: url(./Assests/pexels-lara-jameson-9363215.jpg);
 
     }
 
+    70%,
     100% {
         background-image: url(./Assests/pexels-gabby-k-6973678.jpg);
 
