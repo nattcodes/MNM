@@ -50,6 +50,7 @@ body {
 
 .hamburger-lines {
     display: none;
+    z-index: 9999;
 }
 
 .hamburger-lines .btn {
@@ -2125,7 +2126,7 @@ footer .mnm-footer-content {
 
     .hero-content {
 
-        padding: 5rem 3rem 2rem;
+        padding: 5rem 2rem 2rem;
 
     }
 
