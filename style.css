@@ -107,12 +107,33 @@ body {
 
 /* ================================HERO SECTION=================================== */
 .hero {
-    background-image: url('https://img.freepik.com/free-photo/funny-dark-skinned-female-feels-great-dances-rhythm-shakes-raised-hands-sings-along-with-music-wears-headphones_273609-25469.jpg?t=st=1735580999~exp=1735584599~hmac=69b0a68fc23d6cc3749f494a500843970af5f2b2cffac769f56211be35d94120&w=1480');
     background-position: center;
     background-size: cover;
     background-blend-mode: overlay;
     position: relative;
+    width: 100%;
+    animation: backgroundFade 30s infinite ease-in-out;
 }
+
+@keyframes backgroundFade {
+
+
+    0% {
+        background-image: url('https://img.freepik.com/free-photo/funny-dark-skinned-female-feels-great-dances-rhythm-shakes-raised-hands-sings-along-with-music-wears-headphones_273609-25469.jpg?t=st=1735580999~exp=1735584599~hmac=69b0a68fc23d6cc3749f494a500843970af5f2b2cffac769f56211be35d94120&w=1480');
+
+    }
+
+    50% {
+        background-image: url(./Assests/pexels-lara-jameson-9363215.jpg);
+
+    }
+
+    100% {
+        background-image: url(./Assests/pexels-gabby-k-6973678.jpg);
+
+    }
+}
+
 
 .hero::before {
     content: "";
@@ -131,11 +152,10 @@ body {
     z-index: 2;
     /* Ensures content appears above the background */
     padding: 7rem 3rem 2rem;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
 }
-
 
 .hero-text {
     grid-column: 2 / span 10;
@@ -1275,7 +1295,7 @@ footer .mnm-footer-content {
 
 
     .hero {
-        background-image: url('https://img.freepik.com/free-photo/funny-dark-skinned-female-feels-great-dances-rhythm-shakes-raised-hands-sings-along-with-music-wears-headphones_273609-25469.jpg?t=st=1735580999~exp=1735584599~hmac=69b0a68fc23d6cc3749f494a500843970af5f2b2cffac769f56211be35d94120&w=1480');
+
         background-position: center;
         background-size: cover;
         background-blend-mode: overlay;
@@ -2081,7 +2101,7 @@ footer .mnm-footer-content {
 
 
     .hero {
-        background-image: url('https://img.freepik.com/free-photo/funny-dark-skinned-female-feels-great-dances-rhythm-shakes-raised-hands-sings-along-with-music-wears-headphones_273609-25469.jpg?t=st=1735580999~exp=1735584599~hmac=69b0a68fc23d6cc3749f494a500843970af5f2b2cffac769f56211be35d94120&w=1480');
+
         background-position: center;
         background-size: cover;
         background-blend-mode: overlay;
@@ -2102,7 +2122,7 @@ footer .mnm-footer-content {
 
     .hero-content {
 
-        padding: 5rem 1.5rem 2rem;
+        padding: 5rem 3rem 2rem;
 
     }
 
@@ -2718,7 +2738,7 @@ footer .mnm-footer-content {
 
 
     .hero-heading {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
 
     }
 

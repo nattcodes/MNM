@@ -210,6 +210,19 @@ menuBtn.addEventListener('click', () => {
 // ===============X==============MENU BAR==========X====
 
 
+AOS.init();
+
+
+const hero = document.querySelector('.hero');
+
+function resetHeroAnimation() {
+    hero.style.animation = 'none';
+    void hero.offsetWidth; // Trigger reflow to reset animation
+    hero.style.animation = 'backgroundFade 30s infinite ease-in-out';
+}
+
+// Reset the animation every 35 seconds (same as the animation duration)
+setInterval(resetHeroAnimation, 30000);
 
 
 
