@@ -12,6 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Current meta tags -->
+    <meta name="description"
+        content="Mena Nath Media - Global creative marketing agency specializing in branding, PR, influencer marketing, and content strategy for beauty, fashion & lifestyle brands worldwide.">
+    <meta name="keywords"
+        content="global marketing agency, international brand strategy, PR agency, influencer marketing, content production, social media management">
+    <meta name="author" content="Mena Nath Media">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Mena Nath Media | Creative Marketing Agency">
+    <meta property="og:description"
+        content="We build brands that dare to stand out through innovative PR, influencer marketing, and content strategies for the global beauty, fashion & lifestyle sectors.">
+    <meta property="og:image" content="./Branding.png">
+    <meta property="og:url" content="https://menanathmedia.com">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -21,7 +35,7 @@
 
 <body>
     <nav class="navbar">
-        <a href="/" class="logo"><img class="logo-brand" style="width: 50px;" src="./Branding.png" alt=""></a>
+        <a href="/" class="logo"><img class="logo-brand" style="width: 50px;" src="./Branding (1).png" alt=""></a>
         <div class="hamburger-lines">
             <div class="btn">
                 <span class="line line1"></span>
@@ -30,14 +44,14 @@
         </div>
         <div class="nav-links">
             <a href="#home">HOME</a>
-            <a href="#work">ABOUT</a>
-            <a href="#about">SERVICES</a>
+            <a href="#about">ABOUT</a>
+            <a href="#service">SERVICES</a>
             <a href="#contact">CONTACT</a>
         </div>
     </nav>
 
     <main>
-        <div class="hero">
+        <div class="hero" id="home">
             <div class="hero-content">
                 <div class="hero-text " data-aos="fade-left" data-aos-duration="500">
                     <span class="creative-tag">CREATIVE MARKETING AGENCY</span>
@@ -55,7 +69,7 @@
                 </div>
                 <div class="social-icons" data-aos="fade-right" data-aos-duration="800">
                     <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/menanathmedia/"></a> <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-tiktok"></i>
                     <i class="fa-brands fa-x-twitter"></i>
                     <i class="fa-brands fa-linkedin-in"></i>
@@ -68,7 +82,7 @@
 
         </div>
 
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="about-header">
                 <!-- <div class="badge">ABOUT US</div> -->
                 <div class="about-header-text">
@@ -106,7 +120,7 @@
 
             </div>
         </section>
-        <section class="horizontal-section">
+        <section class="horizontal-section" id="service">
             <div class="sticky-wrapper">
 
                 <div class="cards-container">
@@ -458,7 +472,7 @@
 
     </main>
 
-    <footer>
+    <footer id="contact">
         <div class="mnm-footer-content">
             <div class="mnm-footer-section">
                 <img src="./Branding.png" class="mnm-logo" />
