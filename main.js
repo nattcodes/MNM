@@ -209,8 +209,10 @@ menuBtn.addEventListener('click', () => {
 
 // ===============X==============MENU BAR==========X====
 
-
-AOS.init();
+// Initialize AOS when DOM is loaded
+document.addEventListener('DOMContentLoaded', function () {
+    AOS.init();
+});
 
 
 const hero = document.querySelector('.hero');
